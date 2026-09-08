@@ -1,0 +1,513 @@
+/* =========================================================
+   ChatGPT Astra 6 - Pure Mobile UI Styles
+   ========================================================= */
+
+:root {
+  --primary-blue: #2f5cf7;
+  --primary-blue-hover: #214de8;
+  --primary-blue-active: #183fc9;
+  --text-dark: #000000;
+  --text-grey-label: #1a1a1a;
+  --text-disclaimer-light: rgba(255, 255, 255, 0.68);
+  --text-disclaimer-dark: #737373;
+  --input-bg: #f0f2f5;
+  --input-border: #d2d6dc;
+  --input-shadow: 0 3px 5px rgba(0, 0, 0, 0.16);
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-display: 'Bebas Neue', 'Impact', sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  font-family: var(--font-sans);
+  background-color: #ffffff;
+}
+
+/* Base mobile container: 100% on phones, centered on desktop */
+.mobile-viewport {
+  width: 100%;
+  max-width: 430px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   Screen Base Styles
+   ========================================================= */
+.screen {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 24px 28px 30px 28px;
+  position: relative;
+}
+
+.screen.active {
+  display: flex;
+}
+
+/* Header with CHAT GPT and OpenAI swirl logo */
+.screen-top-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  padding-top: 8px;
+  z-index: 10;
+}
+
+.chatgpt-branding {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.chatgpt-branding.white-theme {
+  color: #ffffff;
+}
+
+.chatgpt-branding.dark-theme {
+  color: #1a1a1a;
+}
+
+.openai-swirl-icon {
+  height: 26px;
+  width: auto;
+  max-width: 46px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.openai-swirl-icon.white-logo {
+  filter: brightness(0) invert(1);
+}
+
+/* Blue pill buttons */
+.btn-blue-pill {
+  background-color: var(--primary-blue);
+  color: #ffffff;
+  border: none;
+  border-radius: 9999px;
+  font-family: var(--font-sans);
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  padding: 13px 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(47, 92, 247, 0.4);
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.btn-blue-pill:hover {
+  background-color: var(--primary-blue-hover);
+  box-shadow: 0 6px 18px rgba(47, 92, 247, 0.55);
+}
+
+.btn-blue-pill:active {
+  background-color: var(--primary-blue-active);
+  transform: scale(0.98);
+}
+
+/* =========================================================
+   SCREEN 1: LANDING SCREEN (media_1788881910913.png)
+   ========================================================= */
+.screen-1-landing {
+  background-color: #01071c;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glowing cyan & blue light streak down the left side */
+.cosmic-light-beam {
+  position: absolute;
+  top: -15%;
+  left: -35%;
+  width: 140%;
+  height: 130%;
+  background: 
+    linear-gradient(116deg, rgba(0, 80, 240, 0.85) 0%, rgba(0, 190, 255, 0.95) 15%, rgba(0, 110, 255, 0.6) 24%, rgba(1, 7, 28, 0) 46%),
+    radial-gradient(ellipse at 18% 45%, rgba(0, 215, 255, 0.45) 0%, rgba(30, 80, 255, 0.25) 30%, transparent 60%);
+  filter: blur(8px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.screen-1-landing .screen-top-header {
+  position: relative;
+  z-index: 10;
+}
+
+.hero-center-block {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: auto 0;
+  padding: 40px 0 20px 0;
+}
+
+.hero-serif-free {
+  font-family: var(--font-serif);
+  font-size: 58px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: 2px;
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.45);
+}
+
+.hero-condensed-title {
+  font-family: var(--font-display);
+  font-size: 72px;
+  font-weight: 900;
+  line-height: 0.88;
+  letter-spacing: 1px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 34px;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+}
+
+.hero-condensed-title span {
+  display: block;
+}
+
+.screen-1-landing .btn-blue-pill {
+  min-width: 170px;
+  font-size: 20px;
+  padding: 13px 46px;
+}
+
+/* Screen 1 Footer copy & disclaimer */
+.screen-1-footer {
+  position: relative;
+  z-index: 10;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 20px;
+}
+
+.student-offer-text {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #ffffff;
+  letter-spacing: -0.3px;
+  text-align: left;
+}
+
+.disclaimer-paragraph {
+  font-size: 8.5px;
+  line-height: 1.35;
+  color: var(--text-disclaimer-light);
+  text-align: left;
+  letter-spacing: 0.1px;
+}
+
+.disclaimer-paragraph.dark {
+  color: var(--text-disclaimer-dark);
+}
+
+/* =========================================================
+   SCREEN 2: FORM SCREEN (media_1788881910848.png)
+   ========================================================= */
+.screen-2-form {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.form-center-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: auto 0;
+  padding: 20px 0;
+}
+
+.form-field-group {
+  width: 100%;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.form-label-italic-serif {
+  display: block;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: var(--text-grey-label);
+  margin-bottom: 12px;
+}
+
+.input-box-wrapper,
+.select-box-wrapper {
+  width: 100%;
+  max-width: 270px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.styled-text-input {
+  width: 100%;
+  height: 44px;
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 14px;
+  padding: 0 16px;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: #111827;
+  text-align: center;
+  box-shadow: var(--input-shadow);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.styled-text-input::placeholder {
+  color: #9aa1ad;
+  font-family: var(--font-sans);
+  font-size: 16px;
+}
+
+.styled-text-input:focus {
+  border-color: var(--primary-blue);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(47, 92, 247, 0.2), var(--input-shadow);
+}
+
+.styled-select-input {
+  width: 100%;
+  height: 44px;
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 14px;
+  padding: 0 38px 0 16px;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: #4b5563;
+  text-align-last: center;
+  box-shadow: var(--input-shadow);
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.styled-select-input:focus {
+  border-color: var(--primary-blue);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(47, 92, 247, 0.2), var(--input-shadow);
+}
+
+.select-dropdown-arrow {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #555e6c;
+  display: flex;
+  align-items: center;
+}
+
+.screen-2-form .btn-blue-pill {
+  min-width: 170px;
+  font-size: 20px;
+  padding: 13px 44px;
+  margin-top: 14px;
+}
+
+/* Bottom Brand Row (Screens 2 & 3) */
+.screen-bottom-brand-area {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 20px;
+}
+
+.bottom-brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px;
+}
+
+.condensed-brand-title {
+  font-family: var(--font-display);
+  font-size: 46px;
+  font-weight: 900;
+  line-height: 0.85;
+  letter-spacing: 0.8px;
+  color: #637083;
+  display: flex;
+  flex-direction: column;
+}
+
+.openai-swirl-bottom-icon {
+  height: 52px;
+  width: auto;
+  max-width: 90px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+/* =========================================================
+   SCREEN 3: VIRAL SHARE SCREEN (media_1788881910851.png)
+   ========================================================= */
+.screen-3-share {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.share-center-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin: auto 0;
+  padding: 20px 0;
+}
+
+.share-hero-headline {
+  font-family: var(--font-sans);
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: -0.3px;
+  color: #000000;
+  max-width: 310px;
+  margin-bottom: 40px;
+}
+
+/* Buttons Stack */
+.share-buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  max-width: 230px;
+}
+
+.share-buttons-container .btn-blue-pill {
+  width: 100%;
+  font-size: 19px;
+  padding: 13px 20px;
+}
+
+/* Subtle Share Counter Pill (interactive bonus) */
+.share-counter-tag {
+  margin-top: 24px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 5px 14px;
+  border-radius: 999px;
+}
+
+/* =========================================================
+   Unlock Celebration Modal
+   ========================================================= */
+.unlock-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 10000;
+}
+
+.unlock-modal-overlay.hidden {
+  display: none;
+}
+
+.modal-dialog-box {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 28px 24px;
+  text-align: center;
+  max-width: 320px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  animation: modalPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes modalPop {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-dialog-box h2 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 10px 0 8px 0;
+}
+
+.modal-dialog-box p {
+  font-size: 13px;
+  line-height: 1.45;
+  color: #475569;
+  margin-bottom: 16px;
+}
+
+.modal-code-chip {
+  background: #f1f5f9;
+  border: 1px dashed #94a3b8;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: monospace;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1e40af;
+  margin-bottom: 18px;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Screen 2 - GPT-6 Astra Form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-color: #ffffff;">
+
+  <div class="mobile-viewport">
+    <section class="screen screen-2-form active">
+      <header class="screen-top-header">
+        <div class="chatgpt-branding dark-theme">
+          <span>CHAT GPT</span>
+          <img src="ChatGPT-Logo.png" alt="OpenAI Logo" class="openai-swirl-icon">
+        </div>
+      </header>
+
+      <form class="form-center-block" onsubmit="window.location.href='screen3.html'; return false;">
+        <div class="form-field-group">
+          <label for="user-name" class="form-label-italic-serif">YOUR NAME</label>
+          <div class="input-box-wrapper">
+            <input 
+              type="text" 
+              id="user-name" 
+              class="styled-text-input" 
+              placeholder="enter here" 
+              required
+              autocomplete="name"
+            >
+          </div>
+        </div>
+
+        <div class="form-field-group">
+          <label for="education-level" class="form-label-italic-serif">SELECT EDUCATION LEVEL</label>
+          <div class="select-box-wrapper">
+            <select id="education-level" class="styled-select-input" required>
+              <option value="" disabled selected hidden>select</option>
+              <option value="High School">High School</option>
+              <option value="Undergraduate">Undergraduate / College</option>
+              <option value="Postgraduate">Postgraduate / Masters</option>
+              <option value="PhD / Doctorate">PhD / Doctorate</option>
+              <option value="Researcher / Faculty">Researcher / Faculty</option>
+              <option value="Self-Taught / Other">Self-Taught / Other</option>
+            </select>
+            <div class="select-dropdown-arrow">
+              <svg width="16" height="12" viewBox="0 0 16 12" fill="currentColor">
+                <path d="M8 12L0 0h16L8 12z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-blue-pill">SUBMIT</button>
+      </form>
+
+      <footer class="screen-bottom-brand-area">
+        <div class="bottom-brand-row">
+          <div class="condensed-brand-title">
+            <span>GET GPT</span>
+            <span>ASTRA 6</span>
+          </div>
+          <img src="ChatGPT-Logo.png" alt="OpenAI Logo" class="openai-swirl-bottom-icon">
+        </div>
+        <p class="disclaimer-paragraph dark">
+          AI Mode conversation: gpt 6 astragpt 6 astraGPT-6 Astra is OpenAI's next-generation frontier AI model, officially unveiled on September 3, 2026. Positioned as OpenAI's most powerful, intelligent, and tightly aligned model to date, it represents a massive paradigm shift from conversational chatbots toward an agentic "AI operating system" capable of managing long, complex professional workflows. Industry leaders, including Nvidia's Jensen Huang, have notably pointed to this release as a sign that AGI
+        </p>
+      </footer>
+    </section>
+  </div>
+
+</body>
+</html>

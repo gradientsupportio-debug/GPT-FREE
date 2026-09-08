@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>ChatGPT Astra 6</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+  <!-- Mobile Viewport Container -->
+  <div class="mobile-viewport">
+
+    <!-- ==============================================
+         SCREEN 1: LANDING SCREEN (Hero)
+         ============================================== -->
+    <section id="screen-1" class="screen screen-1-landing active">
+      <!-- Angled light flare effect -->
+      <div class="cosmic-light-beam"></div>
+
+      <!-- Top Right Branding -->
+      <header class="screen-top-header">
+        <div class="chatgpt-branding white-theme">
+          <span>CHAT GPT</span>
+          <img src="ChatGPT-Logo.png" alt="OpenAI Logo" class="openai-swirl-icon white-logo">
+        </div>
+      </header>
+
+      <!-- Center Hero Content -->
+      <div class="hero-center-block">
+        <h2 class="hero-serif-free">FREE</h2>
+        <h1 class="hero-condensed-title">
+          <span>GET GPT</span>
+          <span>ASTRA 6</span>
+        </h1>
+        <button class="btn-blue-pill" onclick="proceedToForm()">GET NOW</button>
+      </div>
+
+      <!-- Footer Offer and Disclaimer -->
+      <footer class="screen-1-footer">
+        <p class="student-offer-text">
+          free for students<br>
+          clcik now to get free astra 6 gpt<br>
+          open AI
+        </p>
+        <p class="disclaimer-paragraph">
+          AI Mode conversation: gpt 6 astragpt 6 astraGPT-6 Astra is OpenAI's next-generation frontier AI model, officially unveiled on September 3, 2026. Positioned as OpenAI's most powerful, intelligent, and tightly aligned model to date, it represents a massive paradigm shift from conversational chatbots toward an agentic "AI operating system" capable of managing long, complex professional workflows. Industry leaders, including Nvidia's Jensen Huang, have notably pointed to this release as a sign that AGI
+        </p>
+      </footer>
+    </section>
+
+    <!-- ==============================================
+         SCREEN 2: FORM SCREEN
+         ============================================== -->
+    <section id="screen-2" class="screen screen-2-form">
+      <!-- Top Right Branding -->
+      <header class="screen-top-header">
+        <div class="chatgpt-branding dark-theme">
+          <span>CHAT GPT</span>
+          <img src="ChatGPT-Logo.png" alt="OpenAI Logo" class="openai-swirl-icon">
+        </div>
+      </header>
+
+      <!-- Center Form Content -->
+      <form class="form-center-block" onsubmit="handleFormSubmit(event)">
+        <div class="form-field-group">
+          <label for="user-name" class="form-label-italic-serif">YOUR NAME</label>
+          <div class="input-box-wrapper">
+            <input 
+              type="text" 
+              id="user-name" 
+              class="styled-text-input" 
+              placeholder="enter here" 
+              required
+              autocomplete="name"
+            >
+          </div>
+        </div>
+
+        <div class="form-field-group">
+          <label for="education-level" class="form-label-italic-serif">SELECT EDUCATION LEVEL</label>
+          <div class="select-box-wrapper">
+            <select id="education-level" class="styled-select-input" required>
+              <option value="" disabled selected hidden>select</option>
+              <option value="High School">High School</option>
+              <option value="Undergraduate">Undergraduate / College</option>
+              <option value="Postgraduate">Postgraduate / Masters</option>
+              <option value="PhD / Doctorate">PhD / Doctorate</option>
+              <option value="Researcher / Faculty">Researcher / Faculty</option>
+              <option value="Self-Taught / Other">Self-Taught / Other</option>
+            </select>
+            <div class="select-dropdown-arrow">
+              <svg width="16" height="12" viewBox="0 0 16 12" fill="currentColor">
+                <path d="M8 12L0 0h16L8 12z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-blue-pill" id="submit-btn">SUBMIT</button>
+      </form>
+
+      <!-- Bottom Brand and Disclaimer -->
+      <footer class="screen-bottom-brand-area">
+        <div class="bottom-brand-row">
+          <div class="condensed-brand-title">
+            <span>GET GPT</span>
+            <span>ASTRA 6</span>
+          </div>
+          <img src="ChatGPT-Logo.png" alt="OpenAI Logo" class="openai-swirl-bottom-icon">
+        </div>
+        <p class="disclaimer-paragraph dark">
+          AI Mode conversation: gpt 6 astragpt 6 astraGPT-6 Astra is OpenAI's next-generation frontier AI model, officially unveiled on September 3, 2026. Positioned as OpenAI's most powerful, intelligent, and tightly aligned model to date, it represents a massive paradigm shift from conversational chatbots toward an agentic "AI operating system" capable of managing long, complex professional workflows. Industry leaders, including Nvidia's Jensen Huang, have notably pointed to this release as a sign that AGI
+        </p>
+      </footer>
+    </section>
+
+    <!-- ==============================================
+         SCREEN 3: VIRAL SHARE SCREEN
+         ============================================== -->
+    <section id="screen-3" class="screen screen-3-share">
+      <!-- Top Right Branding -->
+      <header class="screen-top-header">
+        <div class="chatgpt-branding dark-theme">
+          <span>CHAT GPT</span>
+          <img src="ChatGPT-Logo.png" alt="OpenAI Logo" class="openai-swirl-icon">
+        </div>
+      </header>
+
+      <!-- Center Share Content -->
+      <div class="share-center-block">
+        <h1 class="share-hero-headline">
+          SHARE WITH 10 PEOPLE<br>
+          TO GET FREE CHAT GPT<br>
+          ASTRA 6
+        </h1>
+
+        <div class="share-buttons-container">
+          <button class="btn-blue-pill" onclick="shareOnWhatsApp()">WHATSAPP</button>
+          <button class="btn-blue-pill" onclick="shareOnInstagram()">INSTAGRAM</button>
+        </div>
+
+        <div class="share-counter-tag">
+          <span id="share-count-display">0</span> of 10 shared
+        </div>
+      </div>
+
+      <!-- Bottom Brand and Disclaimer -->
+      <footer class="screen-bottom-brand-area">
+        <div class="bottom-brand-row">
+          <div class="condensed-brand-title">
+            <span>GET GPT</span>
+            <span>ASTRA 6</span>
+          </div>
+          <img src="ChatGPT-Logo.png" alt="OpenAI Logo" class="openai-swirl-bottom-icon">
+        </div>
+        <p class="disclaimer-paragraph dark">
+          AI Mode conversation: gpt 6 astragpt 6 astraGPT-6 Astra is OpenAI's next-generation frontier AI model, officially unveiled on September 3, 2026. Positioned as OpenAI's most powerful, intelligent, and tightly aligned model to date, it represents a massive paradigm shift from conversational chatbots toward an agentic "AI operating system" capable of managing long, complex professional workflows. Industry leaders, including Nvidia's Jensen Huang, have notably pointed to this release as a sign that AGI
+        </p>
+      </footer>
+    </section>
+
+  </div>
+
+  <!-- Unlocked Celebration Modal -->
+  <div id="unlock-modal" class="unlock-modal-overlay hidden">
+    <div class="modal-dialog-box">
+      <div style="font-size: 40px;">🎉</div>
+      <h2>ACCESS UNLOCKED!</h2>
+      <p>You've completed all 10 shares! Your 1-Year complimentary access to <strong>GPT-6 Astra</strong> is now active.</p>
+      <div class="modal-code-chip">ASTRA6-STUDENT-VIP-2026</div>
+      <button class="btn-blue-pill" onclick="closeModal()" style="width: 100%; font-size: 16px;">CONTINUE</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
