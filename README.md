@@ -12,7 +12,7 @@ Built with **HTML5, CSS3, JavaScript**, and a zero-dependency **Java HTTP Server
    - Dark cosmic theme with angled electric cyan/blue light flare.
    - Serif header **"FREE"** and ultra-bold condensed **"GET GPT ASTRA 6"**.
    - Pill-shaped **"GET NOW"** CTA button.
-   - Left-aligned offer copy (*"free for students clcik now..."*) and official AI disclaimer.
+   - Left-aligned offer copy (*"free for students click now..."*) and official AI disclaimer.
 
 2. **Screen 2 - Registration Form** (`media_1788881910848.png`)
    - Clean white background with top-right "CHAT GPT" logo.
